@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable} antialiased bg-white`}
+        className={`${manrope.variable} antialiased bg-[#0E0E0E]`}
       >
         <Navbar />
         {children}

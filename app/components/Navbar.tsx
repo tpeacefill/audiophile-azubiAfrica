@@ -21,10 +21,10 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className={`bg-black border-b border-gray-700 ${manrope.variable}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 bg-transparent ${manrope.variable} relative`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Responsive nav bar container */}
-        <div className="relative flex items-center h-20">
+        {/* Flex container for logo, nav, cart, with border bottom */}
+        <div className="relative flex items-center h-20 border-b border-white/10">
           {/* Hamburger: always left on small and md, hidden on lg */}
           <button
             className="absolute left-0 md:static md:mr-6 focus:outline-none lg:hidden z-10"
@@ -36,7 +36,7 @@ const Navbar = () => {
             </svg>
           </button>
           {/* Logo: centered on small, left on md and up */}
-          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:relative md:left-0 md:ml-0">
+          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2  md:translate-x-0 md:relative md:left-0 md:ml-0">
             <Link href="/">
               <Image src="/logo.svg" alt="Audiophile Logo" height={24} width={90} className="h-6 w-auto" priority />
             </Link>
