@@ -36,7 +36,7 @@ const Navbar = () => {
             </svg>
           </button>
           {/* Logo: centered on small, left on md and up */}
-          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 md:relative md:left-0 md:ml-0">
+          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:relative md:left-0 md:ml-0">
             <Link href="/">
               <Image src="/logo.svg" alt="Audiophile Logo" height={24} width={90} className="h-6 w-auto" priority />
             </Link>
