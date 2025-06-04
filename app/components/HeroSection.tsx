@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screenflex items-center overflow-visible bg-transparent">
+    <section className="relative w-full min-h-screen flex items-center overflow-visible bg-transparent">
       {/* Absolutely positioned, large hero image that extends into the navbar */}
       <div className="hidden lg:block absolute right-28 top-0 h-[800px] w-[800px] -z-10 pointer-events-none select-none">
         <Image

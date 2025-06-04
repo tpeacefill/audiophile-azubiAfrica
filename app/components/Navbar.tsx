@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Manrope } from 'next/font/google';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -19,9 +19,22 @@ const navLinks = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 bg-transparent ${manrope.variable} relative`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      scrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
+    } ${manrope.variable} relative`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Flex container for logo, nav, cart, with border bottom */}
         <div className="relative flex items-center h-20 border-b border-white/10">
@@ -36,7 +49,7 @@ const Navbar = () => {
             </svg>
           </button>
           {/* Logo: centered on small, left on md and up */}
-          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2  md:translate-x-0 md:relative md:left-0 md:ml-0">
+          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2  md:translate-x-1/2 md:relative md:left-0 md:ml-0">
             <Link href="/">
               <Image src="/logo.svg" alt="Audiophile Logo" height={24} width={90} className="h-6 w-auto" priority />
             </Link>
@@ -88,4 +101,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

@@ -5,10 +5,12 @@ import Section4 from './components/Section4';
 import Section5 from './components/Section5';
 import Section6 from './components/Section6';
 import Footer from './components/Footer';
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col min-h-screen w-full">
+    <div className=" flex flex-col min-h-screen w-full">
+      <Navbar/>
       <HeroSection />
       <Section2 />
       <Section3 />
