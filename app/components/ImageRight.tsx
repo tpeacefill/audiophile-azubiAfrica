@@ -1,40 +1,32 @@
 import React from 'react';
 import Image from 'next/image';
 
-interface ImageleftProps {
-  span?: string;
+interface ImageRightProps {
   image: string;
   h1: React.ReactNode;
   p: string;
 }
 
-const Imageleft: React.FC<ImageleftProps> = ({ span, image, h1, p }) => {
+const ImageRight: React.FC<ImageRightProps> = ({ image, h1, p }) => {
   return (
     <section className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-20 px-0">
-        {/* Left Side - Image */}
-        <div className="w-full flex justify-center lg:justify-start lg:px-8 lg:flex-1">
+      <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12 lg:flex-row-reverse lg:items-center lg:gap-20 px-0">
+        {/* Right Side - Image */}
+        <div className="w-full flex justify-center lg:justify-end lg:px-8 lg:flex-1">
           <div className="bg-[#f1f1f1] rounded-lg w-full max-w-3xl h-80 sm:h-96 lg:w-[500px] lg:h-[500px] flex items-center justify-center relative overflow-hidden">
             <Image
               src={image}
               alt={typeof h1 === 'string' ? h1 : 'Product image'}
-              width={400}
-              height={400}
+              width={450}
+              height={450}
               className="object-contain w-60 h-60 sm:w-80 sm:h-80 lg:w-[28rem] lg:h-[28rem]"
               priority
             />
           </div>
         </div>
 
-        {/* Right Side - Content */}
-        <div className="w-full max-w-2xl text-center flex flex-col items-center lg:items-start lg:text-left lg:flex-1">
-          {span && (
-            <div className="mb-6">
-              <span className="text-[#D87D4A] tracking-[0.5em] text-sm font-medium uppercase mb-4 block">
-                {span}
-              </span>
-            </div>
-          )}
+        {/* Left Side - Content */}
+        <div className="w-full max-w-2xl text-center flex flex-col lg:pl-8 items-center lg:items-start lg:text-left lg:flex-1">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black uppercase mb-6 leading-tight">
             {h1}
           </h1>
@@ -50,4 +42,4 @@ const Imageleft: React.FC<ImageleftProps> = ({ span, image, h1, p }) => {
   );
 };
 
-export default Imageleft;
+export default ImageRight; 
