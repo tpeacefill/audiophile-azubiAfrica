@@ -1,11 +1,19 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export default function HeroSection() {
   return (
     <section className="relative w-full min-h-screen flex items-center overflow-visible bg-transparent">
       {/* Large screen: Absolutely positioned, large hero image that extends into the navbar */}
-      <div className="hidden lg:block absolute right-28 top-0 h-[800px] w-[800px] -z-10 pointer-events-none select-none">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="hidden lg:block absolute right-28 top-0 h-[800px] w-[800px] -z-10 pointer-events-none select-none"
+      >
         <Image
           src="/HeroImage.png"
           alt="XX99 Mark II Headphones"
@@ -14,9 +22,14 @@ export default function HeroSection() {
           className="object-contain w-full h-full drop-shadow-2xl"
           priority
         />
-      </div>
+      </motion.div>
       {/* Medium screen: Centered hero image */}
-      <div className="hidden md:flex lg:hidden absolute inset-0 w-full items-center justify-center z-0">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="hidden md:flex lg:hidden absolute inset-0 w-full items-center justify-center z-0"
+      >
         <Image
           src="/HeroImageMedium.png"
           alt="XX99 Mark II Headphones"
@@ -25,9 +38,14 @@ export default function HeroSection() {
           className="object-contain w-full"
           priority
         />
-      </div>
+      </motion.div>
       {/* Small screen: Centered hero image */}
-      <div className="flex md:hidden absolute inset-0 w-full h-full items-center justify-center z-0">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="flex md:hidden absolute inset-0 w-full h-full items-center justify-center z-0"
+      >
         <Image
           src="/HeroImageSmall.png"
           alt="XX99 Mark II Headphones"
@@ -36,11 +54,16 @@ export default function HeroSection() {
           className="object-contain w-full h-full"
           priority
         />
-      </div>
+      </motion.div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[50vh] lg:min-h-[80vh]">
           {/* Text Content: Centered on small/medium, left on large */}
-          <div className="flex flex-col justify-center items-center text-center -mt-8 lg:items-start lg:text-left lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col justify-center items-center text-center -mt-8 lg:items-start lg:text-left lg:mt-0"
+          >
             <span className="inline-block tracking-[0.5em] text-gray-400 text-base md:text-lg font-light uppercase mb-6">
               NEW PRODUCT
             </span>
@@ -53,11 +76,15 @@ export default function HeroSection() {
               Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
             </p>
             <Link href="/headphones">
-              <button className="group bg-[#D87D4A] hover:bg-[#fbaf85] text-white font-bold px-8 py-4 text-base tracking-[0.1em] uppercase transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="group bg-[#D87D4A] hover:bg-[#fbaf85] text-white font-bold px-8 py-4 text-base tracking-[0.1em] uppercase transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg"
+              >
                 SEE PRODUCT
-              </button>
+              </motion.button>
             </Link>
-          </div>
+          </motion.div>
           {/* Right: Empty, image is absolutely positioned on large screens */}
           <div className="hidden lg:flex"></div>
         </div>
