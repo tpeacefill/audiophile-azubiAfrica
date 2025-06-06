@@ -25,7 +25,7 @@ export default function Section5() {
             {/* Small screen image */}
             <div className="block md:hidden w-full h-full">
               <Image
-                src="/section5-ImageSmall.png"
+                src="/section5/section5-ImageSmall.png"
                 alt="YX1 Earphones"
                 className="object-cover w-full h-[327px]"
                 width={600}
@@ -37,7 +37,7 @@ export default function Section5() {
             {/* Medium and up screen image */}
             <div className="hidden md:block w-full h-full">
               <Image
-                src="/section5-Image.png"
+                src="/section5/section5-Image.png"
                 alt="YX1 Earphones"
                 className="object-cover w-full h-full"
                 width={600}

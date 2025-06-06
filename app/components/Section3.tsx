@@ -15,7 +15,7 @@ export default function Section3() {
         >
           {/* Pattern background */}
           <Image
-            src="/section3-pattern-circles.svg"
+            src="/section3/section3-pattern-circles.svg"
             alt="Pattern"
             width={1000}
             height={1000}
@@ -30,7 +30,7 @@ export default function Section3() {
             className="flex justify-center items-center z-10 pt-16 pb-8 md:flex-1 md:items-start md:justify-start md:pl-12 md:pb-0 md:-ml-12 md:mt-0 lg:mt-12"
           >
             <Image
-              src="/section3-speaker.png"
+              src="/section3/section3-speaker.png"
               alt="ZX9 Speaker"
               width={200}
               height={260}

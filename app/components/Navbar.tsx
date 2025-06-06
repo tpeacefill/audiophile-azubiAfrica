@@ -2,13 +2,8 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { Manrope } from 'next/font/google';
 import { useState, useEffect } from 'react';
 
-const manrope = Manrope({
-  subsets: ['latin'],
-  variable: '--font-manrope',
-});
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -32,9 +27,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
-    } ${manrope.variable} relative`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/70 backdrop-blur' : 'bg-black'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Flex container for logo, nav, cart, with border bottom */}
         <div className="relative flex items-center h-20 border-b border-white/10">

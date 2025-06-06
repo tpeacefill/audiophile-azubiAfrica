@@ -17,7 +17,7 @@ export default function Section4() {
           {/* Background image - Mobile first, then responsive */}
           <div className="absolute inset-0 w-full h-full z-0">
             <Image
-              src="/section4-ImageSmall.png"
+              src="/section4/section4-ImageSmall.png"
               alt="ZX7 Speaker Background"
               fill
               className="object-cover w-full h-full md:hidden"
@@ -25,7 +25,7 @@ export default function Section4() {
               priority
             />
             <Image
-              src="/section4-ImageMedium.png"
+              src="/section4/section4-ImageMedium.png"
               alt="ZX7 Speaker Background"
               fill
               className="object-cover w-full h-full hidden md:block lg:hidden"

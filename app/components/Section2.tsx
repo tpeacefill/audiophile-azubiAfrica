@@ -7,17 +7,17 @@ import { motion } from 'framer-motion';
 const categories = [
   {
     title: 'HEADPHONES',
-    image: '/section2-Image1.png',
+    image: '/section2/section2-Image1.png',
     link: '/headphones',
   },
   {
     title: 'SPEAKERS',
-    image: '/section2Image2.png',
+    image: '/section2/section2Image2.png',
     link: '/speakers',
   },
   {
     title: 'EARPHONES',
-    image: '/section2-Image3.png',
+    image: '/section2/section2-Image3.png',
     link: '/earphones',
   },
 ];
