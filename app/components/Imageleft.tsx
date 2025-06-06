@@ -14,7 +14,7 @@ const Imageleft: React.FC<ImageleftProps> = ({ span, image, h1, p }) => {
       <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-20 px-0">
         {/* Left Side - Image */}
         <div className="w-full flex justify-center lg:justify-start lg:px-8 lg:flex-1">
-          <div className="bg-[#f1f1f1] rounded-lg w-full max-w-3xl h-80 sm:h-96 lg:w-[500px] lg:h-[500px] flex items-center justify-center relative overflow-hidden">
+          <div className="bg-[#f1f1f1] rounded-lg w-full max-w-full h-80 sm:h-96 lg:w-[500px] lg:h-[500px] flex items-center justify-center relative overflow-hidden">
             <Image
               src={image}
               alt={typeof h1 === 'string' ? h1 : 'Product image'}
