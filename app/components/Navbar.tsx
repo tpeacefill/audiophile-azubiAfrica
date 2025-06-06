@@ -30,7 +30,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/70 backdrop-blur' : 'bg-black'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Flex container for logo, nav, cart, with border bottom */}
-        <div className="relative flex items-center h-20 border-b border-white/10">
+        <div className="relative flex items-center h-20 border-b border-white/10 gap-6 md:gap-10 lg:gap-16 lg:justify-between">
           {/* Hamburger: always left on small and md, hidden on lg */}
           <button
             className="absolute left-0 md:static md:mr-6 focus:outline-none lg:hidden z-10"
@@ -41,15 +41,15 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          {/* Logo: centered on small, left on md and up */}
-          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2  md:translate-x-1/2 md:relative md:left-0 md:ml-0">
+          {/* Logo: centered on small, left on md and up, flush left on lg */}
+          <div className="flex-shrink-0 flex items-center mx-auto md:mx-0 absolute left-1/2 -translate-x-1/2 md:static md:left-0 md:translate-x-0 md:relative md:ml-0 lg:static lg:ml-0 lg:relative lg:left-0 lg:translate-x-0">
             <Link href="/">
               <Image src="/logo.svg" alt="Audiophile Logo" height={24} width={90} className="h-6 w-auto" priority />
             </Link>
           </div>
           {/* Nav Links: only show on lg and up, centered */}
           <div className="hidden lg:flex flex-grow justify-center">
-            <div className="flex items-center space-x-10">
+            <div className="flex items-center space-x-14">
               {navLinks.map(link => (
                 <Link
                   key={link.href}

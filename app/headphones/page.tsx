@@ -1,8 +1,19 @@
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import OtherHero from '../components/OtherHero';
+import Section2 from '../components/Section2';
+import Section6 from '../components/Section6';
+import Imageleft from '../components/Imageleft';
+
 export default function HeadphonesPage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl font-bold">Headphones</h1>
-      <p className="mt-4 text-lg text-gray-600">Welcome to the Headphones page.</p>
-    </main>
+    <div className="flex flex-col min-h-screen w-full">
+      <Navbar />
+      <OtherHero title="Headphones" />
+      <Imageleft />
+      <Section2/>
+      <Section6/>
+      <Footer />
+    </div>
   );
 } 

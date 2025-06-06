@@ -33,7 +33,7 @@ export default function Section4() {
               priority
             />
             <Image
-              src="/section4-Image.png"
+              src="/section4/section4-Image.png"
               alt="ZX7 Speaker Background"
               fill
               className="object-cover w-full h-full hidden lg:block"
