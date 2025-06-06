@@ -1,5 +1,8 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const categories = [
   {
@@ -24,9 +27,13 @@ export default function Section2() {
     <section className="bg-white w-full pt-12 sm:pt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-12">
-          {categories.map((cat) => (
-            <div
+          {categories.map((cat, idx) => (
+            <motion.div
               key={cat.title}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="flex flex-col items-center bg-gray-100 rounded-lg pt-0 pb-6 sm:pb-4 shadow-sm hover:shadow-lg transition-shadow duration-200 relative overflow-visible mb-10 sm:mb-0"
             >
               <div className="-mt-16 sm:-mt-16 md:-mt-20 flex items-center justify-center h-32 sm:h-40 md:h-48 lg:h-56 z-10 mb-4 sm:mb-0">
@@ -56,7 +63,7 @@ export default function Section2() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
