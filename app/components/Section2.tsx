@@ -21,7 +21,7 @@ const categories = [
 
 export default function Section2() {
   return (
-    <section className="bg-white w-full">
+    <section className="bg-white w-full pt-12 sm:pt-0">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-16 md:py-24 lg:py-32">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-8 md:gap-10 lg:gap-12">
           {categories.map((cat) => (
