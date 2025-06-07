@@ -6,6 +6,7 @@ import Section2 from '@/app/components/Section2';
 import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
+import ProductMockPhotos from '@/app/components/ProductMockPhotos';
 
 export default function ZX7Page() {
   const feature = productFeatures.find(p => p.slug === 'zx7');
@@ -26,6 +27,11 @@ export default function ZX7Page() {
           inTheBox={feature.inTheBox}
         />
       )}
+      <ProductMockPhotos
+        topLeft="/ProductMockup/ZX7/topLeft.png"
+        bottomLeft="/ProductMockup/ZX7/bottomLeft.png"
+        right="/ProductMockup/ZX7/Right.png"
+      />
       <Section2/>
       <Section6 />
       <Footer />

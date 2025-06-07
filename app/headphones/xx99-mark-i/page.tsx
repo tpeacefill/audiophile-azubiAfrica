@@ -6,6 +6,7 @@ import Section2 from '@/app/components/Section2';
 import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
+import ProductMockPhotos from '@/app/components/ProductMockPhotos';
 
 export default function XX99MarkIPage() {
   const feature = productFeatures.find(p => p.slug === 'xx99-mark-i');
@@ -26,6 +27,11 @@ export default function XX99MarkIPage() {
           inTheBox={feature.inTheBox}
         />
       )}
+      <ProductMockPhotos
+        topLeft="/ProductMockup/XX99-MARK-I/topLeft.png"
+        bottomLeft="/ProductMockup/XX99-MARK-I/bottomLeft.png"
+        right="/ProductMockup/XX99-MARK-I/Right.png"
+      />
       <Section2/>
       <Section6 />
       <Footer />

@@ -6,6 +6,7 @@ import Section2 from '@/app/components/Section2';
 import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
+import ProductMockPhotos from '@/app/components/ProductMockPhotos';
 
 export default function ZX9Page() {
   const feature = productFeatures.find(p => p.slug === 'zx9');
@@ -26,6 +27,11 @@ export default function ZX9Page() {
           inTheBox={feature.inTheBox}
         />
       )}
+      <ProductMockPhotos
+        topLeft="/ProductMockup/ZX9/topLeft.png"
+        bottomLeft="/ProductMockup/ZX9/bottomLeft.png"
+        right="/ProductMockup/ZX9/Right.png"
+      />
       <Section2/>
       <Section6 />
       <Footer />

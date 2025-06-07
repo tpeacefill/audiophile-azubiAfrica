@@ -6,6 +6,7 @@ import Section2 from '@/app/components/Section2';
 import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
+import ProductMockPhotos from '@/app/components/ProductMockPhotos';
 
 export default function YX1WirelessPage() {
   const feature = productFeatures.find(p => p.slug === 'yx1-wireless');
@@ -26,6 +27,11 @@ export default function YX1WirelessPage() {
           inTheBox={feature.inTheBox}
         />
       )}
+      <ProductMockPhotos
+        topLeft="/ProductMockup/YX1-WIRELESS/topLeft.png"
+        bottomLeft="/ProductMockup/YX1-WIRELESS/bottomLeft.png"
+        right="/ProductMockup/YX1-WIRELESS/Right.png"
+      />
       <Section2/>
       <Section6 />
       <Footer />

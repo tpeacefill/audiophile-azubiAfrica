@@ -6,6 +6,7 @@ import Section2 from '@/app/components/Section2';
 import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
+import ProductMockPhotos from '@/app/components/ProductMockPhotos';
 
 export default function XX59Page() {
   const feature = productFeatures.find(p => p.slug === 'xx59');
@@ -26,6 +27,11 @@ export default function XX59Page() {
           inTheBox={feature.inTheBox}
         />
       )}
+      <ProductMockPhotos
+        topLeft="/ProductMockup/XX59/topLeft.png"
+        bottomLeft="/ProductMockup/XX59/botttomLeft.png"
+        right="/ProductMockup/XX59/Right.png"
+      />
       <Section2/>
       <Section6 />
       <Footer />
