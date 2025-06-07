@@ -16,16 +16,19 @@ export default function HeadphonesPage() {
         image="/imageleft/ImageLeftHeadphone.jpg"
         h1={<>XX99 MARK II<br/>HEADPHONES</>}
         p="The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
+        href="/headphones/xx99-mark-ii"
       />
       <ImageRight
-      image="/imageright/ImageRightHeadphone.jpg"
-      h1={<>XX99 Mark I<br/>Headphones</>}
-      p="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
+        image="/imageright/ImageRightHeadphone.jpg"
+        h1={<>XX99 Mark I<br/>Headphones</>}
+        p="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
+        href="/headphones/xx99-mark-i"
       />
       <Imageleft
-      image="/imageleft/ImageLeftHeadphone2.jpg"
-      h1={<>XX59<br/>Headphones</>}
-      p="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
+        image="/imageleft/ImageLeftHeadphone2.jpg"
+        h1={<>XX59<br/>Headphones</>}
+        p="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
+        href="/headphones/xx59"
       />
       <Section2/>
       <Section6/>

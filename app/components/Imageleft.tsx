@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 interface ImageleftProps {
@@ -9,9 +10,10 @@ interface ImageleftProps {
   image: string;
   h1: React.ReactNode;
   p: string;
+  href?: string;
 }
 
-const Imageleft: React.FC<ImageleftProps> = ({ span, image, h1, p }) => {
+const Imageleft: React.FC<ImageleftProps> = ({ span, image, h1, p, href }) => {
   return (
     <section className="w-full bg-white py-20 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-7xl mx-auto flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-20 px-0">
@@ -56,9 +58,15 @@ const Imageleft: React.FC<ImageleftProps> = ({ span, image, h1, p }) => {
           <p className="text-gray-500 text-base leading-relaxed mb-8 max-w-md mx-auto lg:mx-0">
             {p}
           </p>
-          <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold px-6 py-3 text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer">
-            SEE PRODUCT
-          </button>
+          {href ? (
+            <Link href={href} className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold px-6 py-3 text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer block text-center rounded">
+              SEE PRODUCT
+            </Link>
+          ) : (
+            <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold px-6 py-3 text-xs tracking-widest uppercase transition-all duration-300 cursor-pointer">
+              SEE PRODUCT
+            </button>
+          )}
         </motion.div>
       </div>
     </section>

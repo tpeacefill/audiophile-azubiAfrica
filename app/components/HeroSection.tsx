@@ -15,7 +15,7 @@ export default function HeroSection() {
         className="hidden lg:block absolute right-28 top-0 h-[800px] w-[800px] -z-10 pointer-events-none select-none"
       >
         <Image
-          src="/HeroImage.png"
+          src="/hero/HeroImage.png"
           alt="XX99 Mark II Headphones"
           width={800}
           height={800}
@@ -31,7 +31,7 @@ export default function HeroSection() {
         className="hidden md:flex lg:hidden absolute inset-0 w-full items-center justify-center z-0"
       >
         <Image
-          src="/HeroImageMedium.png"
+          src="/hero/HeroImageMedium.png"
           alt="XX99 Mark II Headphones"
           width={600}
           height={600}
@@ -47,7 +47,7 @@ export default function HeroSection() {
         className="flex md:hidden absolute inset-0 w-full h-full items-center justify-center z-0"
       >
         <Image
-          src="/HeroImageSmall.png"
+          src="/hero/HeroImageSmall.png"
           alt="XX99 Mark II Headphones"
           width={400}
           height={300}
