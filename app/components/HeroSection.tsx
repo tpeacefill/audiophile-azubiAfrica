@@ -75,11 +75,11 @@ export default function HeroSection() {
             <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed font-extralight mb-8 max-w-xl">
               Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
             </p>
-            <Link href="/headphones">
+            <Link href="/headphones/xx99-mark-ii">
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
-                className="group bg-[#D87D4A] hover:bg-[#fbaf85] text-white font-bold px-8 py-4 text-base tracking-[0.1em] uppercase transition-all duration-300 ease-out transform hover:scale-105 hover:shadow-lg"
+                className="group bg-[#D87D4A] hover:bg-[#fbaf85] text-white font-bold px-8 py-4 text-base tracking-[0.1em] uppercase transition-all duration-300 ease-out cursor-pointer transform hover:scale-105 hover:shadow-lg"
               >
                 SEE PRODUCT
               </motion.button>

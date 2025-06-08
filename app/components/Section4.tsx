@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Section4() {
   return (
@@ -53,13 +54,15 @@ export default function Section4() {
             <h2 className="text-black text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium tracking-widest uppercase mb-4 sm:mb-6 lg:mb-8">
               ZX7 SPEAKER
             </h2>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="border border-black bg-transparent hover:bg-black hover:text-white font-bold px-6 py-3 sm:px-8 sm:py-3 lg:px-10 lg:py-4 text-sm sm:text-base tracking-widest uppercase transition-all duration-200"
-            >
-              SEE PRODUCT
-            </motion.button>
+            <Link href="/speakers/zx7">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="border border-black bg-transparent hover:bg-black hover:text-white font-bold px-6 py-3 sm:px-8 sm:py-3 lg:px-10 lg:py-4 text-sm sm:text-base tracking-widest uppercase transition-all duration-200 cursor-pointer"
+              >
+                SEE PRODUCT
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

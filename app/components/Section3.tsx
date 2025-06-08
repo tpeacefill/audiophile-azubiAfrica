@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Section3() {
   return (
@@ -50,13 +51,15 @@ export default function Section3() {
             <p className="text-white text-base font-light mb-8 max-w-xs md:max-w-md md:text-lg">
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="bg-[#232323] hover:bg-[#4c4c4c] text-white font-bold px-8 py-4 text-sm tracking-wider uppercase transition-all duration-200 md:px-10 md:text-base md:tracking-widest"
-            >
-              SEE PRODUCT
-            </motion.button>
+            <Link href="/speakers/zx9">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="bg-[#232323] hover:bg-[#4c4c4c] text-white font-bold px-8 py-4 text-sm cursor-pointer tracking-wider uppercase transition-all duration-200 md:px-10 md:text-base md:tracking-widest"
+              >
+                SEE PRODUCT
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>

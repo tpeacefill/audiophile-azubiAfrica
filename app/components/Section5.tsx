@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Section5() {
   return (
@@ -56,13 +57,15 @@ export default function Section5() {
             className="md:basis-1/2 rounded-xl bg-[#F1F1F1] flex flex-col items-start justify-center px-12 py-10 h-[327px]"
           >
             <h2 className="text-xl md:text-3xl lg:text-4xl text-black font-medium tracking-widest uppercase mb-8">YX1 EARPHONES</h2>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.97 }}
-              className="border border-black bg-transparent hover:bg-black hover:text-white font-bold px-10 py-4 text-base tracking-widest uppercase transition-all duration-200"
-            >
-              SEE PRODUCT
-            </motion.button>
+            <Link href="/earphones/yx1-wireless">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                className="border border-black bg-transparent hover:bg-black hover:text-white font-bold px-10 py-4 text-base tracking-widest uppercase transition-all duration-200 cursor-pointer"
+              >
+                SEE PRODUCT
+              </motion.button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
