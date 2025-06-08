@@ -7,6 +7,7 @@ import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
 import ProductMockPhotos from '@/app/components/ProductMockPhotos';
+import ProductYouMayLike from '@/app/components/ProductYouMayLike';
 
 export default function ZX7Page() {
   const feature = productFeatures.find(p => p.slug === 'zx7');
@@ -31,6 +32,25 @@ export default function ZX7Page() {
         topLeft="/ProductMockup/ZX7/topLeft.png"
         bottomLeft="/ProductMockup/ZX7/bottomLeft.png"
         right="/ProductMockup/ZX7/Right.png"
+      />
+      <ProductYouMayLike
+        products={[
+          {
+            name: 'ZX9 SPEAKER',
+            image: '/imageleft/ImageLeftSpeaker.jpg',
+            href: '/speakers/zx9',
+          },
+          {
+            name: 'XX99 MARK I',
+            image: '/imageright/ImageRightHeadphone.jpg',
+            href: '/headphones/xx99-mark-i',
+          },
+          {
+            name: 'XX59',
+            image: '/imageleft/ImageLeftHeadphone2.jpg',
+            href: '/headphones/xx59',
+          },
+        ]}
       />
       <Section2/>
       <Section6 />

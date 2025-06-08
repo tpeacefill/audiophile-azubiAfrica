@@ -7,6 +7,7 @@ import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
 import ProductMockPhotos from '@/app/components/ProductMockPhotos';
+import ProductYouMayLike from '@/app/components/ProductYouMayLike';
 
 export default function YX1WirelessPage() {
   const feature = productFeatures.find(p => p.slug === 'yx1-wireless');
@@ -31,6 +32,26 @@ export default function YX1WirelessPage() {
         topLeft="/ProductMockup/YX1-WIRELESS/topLeft.png"
         bottomLeft="/ProductMockup/YX1-WIRELESS/bottomLeft.png"
         right="/ProductMockup/YX1-WIRELESS/Right.png"
+      />
+      <ProductYouMayLike
+        products={[
+          {
+            name: 'XX99 MARK I',
+            image: '/imageright/ImageRightHeadphone.jpg',
+            href: '/headphones/xx99-mark-i',
+          },
+          {
+            name: 'XX59',
+            image: '/imageleft/ImageLeftHeadphone2.jpg',
+            href: '/headphones/xx59',
+          },
+          {
+            name: 'ZX9 SPEAKER',
+            image: '/imageleft/ImageLeftSpeaker.jpg',
+            href: '/speakers/zx9',
+          },
+
+        ]}
       />
       <Section2/>
       <Section6 />

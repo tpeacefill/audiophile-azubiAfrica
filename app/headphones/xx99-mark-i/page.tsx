@@ -7,6 +7,7 @@ import ProductHero from '@/app/components/ProductHero';
 import ProductFeatures from '../../components/ProductFeatures';
 import { productFeatures } from '@/app/data/feature';
 import ProductMockPhotos from '@/app/components/ProductMockPhotos';
+import ProductYouMayLike from '@/app/components/ProductYouMayLike';
 
 export default function XX99MarkIPage() {
   const feature = productFeatures.find(p => p.slug === 'xx99-mark-i');
@@ -31,6 +32,25 @@ export default function XX99MarkIPage() {
         topLeft="/ProductMockup/XX99-MARK-I/topLeft.png"
         bottomLeft="/ProductMockup/XX99-MARK-I/bottomLeft.png"
         right="/ProductMockup/XX99-MARK-I/Right.png"
+      />
+      <ProductYouMayLike
+        products={[
+          {
+            name: 'XX99 MARK II',
+            image: '/imageleft/ImageLeftHeadphone.jpg',
+            href: '/headphones/xx99-mark-ii',
+          },
+          {
+            name: 'XX59',
+            image: '/imageleft/ImageLeftHeadphone2.jpg',
+            href: '/headphones/xx59',
+          },
+          {
+            name: 'ZX9 SPEAKER',
+            image: '/imageleft/ImageLeftSpeaker.jpg',
+            href: '/speakers/zx9',
+          },
+        ]}
       />
       <Section2/>
       <Section6 />
