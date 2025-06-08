@@ -32,7 +32,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ span, image, h1, p, price }) 
       transition={{ duration: 0.4, ease: 'easeOut' }}
       className="w-full bg-white py-10 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6 lg:px-8"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto lg:px-10">
         <div className="mb-8 sm:mb-10 md:mb-12 mt-4 sm:mt-8 pt-10">
           <button
             type="button"

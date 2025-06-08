@@ -22,7 +22,7 @@ const ProductFeatures: React.FC<ProductFeaturesProps> = ({ featureParagraph1, fe
 
   return (
     <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-24 lg:px-10">
         {/* Features */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
