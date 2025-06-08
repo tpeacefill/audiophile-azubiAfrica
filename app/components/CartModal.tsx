@@ -11,6 +11,7 @@ interface CartModalProps {
 const CartModal: React.FC<CartModalProps> = ({ onClose }) => {
   const { items, removeAll, updateQuantity, getTotal } = useCartStore();
   const router = useRouter();
+  const removeItem = useCartStore((state) => state.removeItem);
 
   const handleBrowseCategories = () => {
     onClose();
@@ -120,6 +121,13 @@ const CartModal: React.FC<CartModalProps> = ({ onClose }) => {
                       onClick={() => updateQuantity(item.id, item.quantity + 1)}
                     >+</button>
                   </div>
+                  <button
+                    className="ml-2 text-gray-300 hover:text-red-500 transition-colors cursor-pointer"
+                    title="Remove item"
+                    onClick={() => removeItem(item.id)}
+                  >
+                    <Trash2 size={18} />
+                  </button>
                 </div>
               ))}
             </div>

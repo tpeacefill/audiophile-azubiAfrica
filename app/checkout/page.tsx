@@ -11,15 +11,15 @@ import { z } from 'zod';
 
 const checkoutSchema = z.object({
   name: z.string().min(1, 'Name is required'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().min(1, 'Phone number is required'),
+  email: z.string().min(1, 'Email is required').email('Please enter a valid email address'),
+  phone: z.string().min(1, 'Phone number is required').regex(/^[0-9]+$/, 'Phone number must contain only numbers'),
   address: z.string().min(1, 'Address is required'),
   zipCode: z.string().min(1, 'ZIP Code is required'),
   city: z.string().min(1, 'City is required'),
   country: z.string().min(1, 'Country is required'),
   paymentMethod: z.enum(['e-money', 'cash']),
-  eMoneyNumber: z.string(),
-  eMoneyPin: z.string(),
+  eMoneyNumber: z.string().min(1, 'e-Money Number is required'),
+  eMoneyPin: z.string().min(1, 'e-Money PIN is required'),
 }).refine(
   (data) => data.paymentMethod !== 'e-money' || data.eMoneyNumber.trim() !== '',
   { message: 'e-Money Number is required', path: ['eMoneyNumber'] }
