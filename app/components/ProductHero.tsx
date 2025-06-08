@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
+import { useCartStore } from '../store/cartStore';
 
 interface ProductHeroProps {
   span: string;
@@ -11,11 +12,14 @@ interface ProductHeroProps {
   h1: React.ReactNode;
   p: string;
   price: string;
+  id: string;
+  productName: string;
 }
 
-const ProductHero: React.FC<ProductHeroProps> = ({ span, image, h1, p, price }) => {
+const ProductHero: React.FC<ProductHeroProps> = ({ span, image, h1, p, price, id, productName }) => {
   const [quantity, setQuantity] = useState(1);
   const router = useRouter();
+  const addItem = useCartStore((state) => state.addItem);
 
   const handleDecrease = () => {
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
@@ -23,6 +27,23 @@ const ProductHero: React.FC<ProductHeroProps> = ({ span, image, h1, p, price }) 
 
   const handleIncrease = () => {
     setQuantity((prev) => prev + 1);
+  };
+
+  const handleAddToCart = () => {
+    // Convert price string to number, removing any commas
+    const numericPrice = Number(price.replace(/,/g, ''));
+
+    // Add the item with the selected quantity
+    for (let i = 0; i < quantity; i++) {
+      addItem({
+        id,
+        name: productName,
+        price: numericPrice,
+        image,
+      });
+    }
+    
+    setQuantity(1); // Reset quantity after adding to cart
   };
 
   return (
@@ -74,7 +95,10 @@ const ProductHero: React.FC<ProductHeroProps> = ({ span, image, h1, p, price }) 
                 <span className="text-lg font-semibold">{quantity}</span>
                 <button className="text-2xl text-gray-700 hover:text-black transition-colors cursor-pointer" onClick={handleIncrease}>+</button>
               </div>
-              <button className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold w-full sm:w-auto px-4 h-12 text-sm tracking-widest uppercase transition-all duration-300 rounded cursor-pointer">
+              <button 
+                onClick={handleAddToCart}
+                className="bg-[#D87D4A] hover:bg-[#FBAF85] text-white font-bold w-full sm:w-auto px-4 h-12 text-sm tracking-widest uppercase transition-all duration-300 rounded cursor-pointer"
+              >
                 Add to cart
               </button>
             </div>

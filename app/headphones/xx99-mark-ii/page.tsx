@@ -15,11 +15,13 @@ export default function XX99MarkIIPage() {
     <div className="flex flex-col min-h-screen w-full">
       <Navbar />
       <ProductHero
+        id="xx99-mark-ii"
         span="NEW PRODUCT"
         image="/imageleft/ImageLeftHeadphone.jpg"
         h1={<>XX99 MARK II<br/>HEADPHONES</>}
         p="The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound."
         price='2,999'
+        productName="XX99 MARK II"
       />
       {features && (
         <ProductFeatures

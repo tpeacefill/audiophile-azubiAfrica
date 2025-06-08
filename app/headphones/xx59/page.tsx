@@ -15,11 +15,13 @@ export default function XX59Page() {
     <div className="flex flex-col min-h-screen w-full">
       <Navbar />
       <ProductHero
+        id="xx59"
         span="NEW PRODUCT"
         image="/imageleft/ImageLeftHeadphone2.jpg"
         h1={<>XX59<br/>HEADPHONES</>}
         p="Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move."
         price="899"
+        productName="XX59"
       />
       {feature && (
         <ProductFeatures

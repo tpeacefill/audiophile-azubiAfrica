@@ -15,11 +15,13 @@ export default function XX99MarkIPage() {
     <div className="flex flex-col min-h-screen w-full">
       <Navbar />
       <ProductHero
+        id="xx99-mark-i"
         span="NEW PRODUCT"
         image="/imageright/ImageRightHeadphone.jpg"
         h1={<>XX99 MARK I<br/>HEADPHONES</>}
         p="As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go."
         price="1,750"
+        productName="XX99 MARK I"
       />
       {feature && (
         <ProductFeatures
